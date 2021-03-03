@@ -1,0 +1,14 @@
+---
+- name: Verify
+  hosts: all
+  tasks:
+    - name: Register apt lists folder
+      stat:
+        path: /var/lib/apt/lists
+      register: __apt_lists
+    - name: Assert that apt cache was updated recently
+      assert:
+        that:
+        - "(ansible_date_time.epoch|float - __apt_lists.stat.mtime) <= 600"
+      when:
+        - ansible_pkg_mgr == "apt"
