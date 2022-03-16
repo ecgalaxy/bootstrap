@@ -3,7 +3,7 @@
   hosts: all
   tasks:
     - name: "Include bootstrap"
-      include_role:
+      ansible.builtin.include_role:
         name: "bootstrap"
   environment:
     http_proxy: "{{ lookup('env', 'http_proxy') }}"
