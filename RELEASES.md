@@ -1,5 +1,9 @@
 # Releases
 
+## 1.4.x
+
+- Support for Ubuntu 24.04 LTS is added.
+
 ## 1.3.x
 
 - Support for Rocky Linux 9 (RHEL 9) is added.

@@ -1,7 +1,7 @@
 ---
 - name: Update apt cache
   ansible.builtin.apt:
-    update_cache: yes
+    update_cache: true
     cache_valid_time: 3600
   become: true
   when:
@@ -9,14 +9,14 @@
 
 - name: Update yum cache
   ansible.builtin.yum:
-    update_cache: yes
+    update_cache: true
   become: true
   when:
     - ansible_pkg_mgr == "yum"
 
 - name: Update dnf cache
   ansible.builtin.dnf:
-    update_cache: yes
+    update_cache: true
   become: true
   when:
     - ansible_pkg_mgr == "dnf"
