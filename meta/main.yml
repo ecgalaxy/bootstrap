@@ -21,6 +21,7 @@ galaxy_info:
         - focal
         - jammy
         - noble
+        - resolute
   galaxy_tags:
     - bootstrap
     - system

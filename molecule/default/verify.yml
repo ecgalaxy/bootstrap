@@ -9,6 +9,6 @@
     - name: Assert that apt cache was updated recently
       ansible.builtin.assert:
         that:
-        - "(ansible_date_time.epoch|float - __apt_lists.stat.mtime) <= 600"
+        - "(ansible_facts['date_time'].epoch|float - __apt_lists.stat.mtime) <= 600"
       when:
-        - ansible_pkg_mgr == "apt"
+        - ansible_facts["pkg_mgr"] == "apt"

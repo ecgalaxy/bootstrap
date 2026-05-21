@@ -25,6 +25,15 @@ Example Playbook
       roles:
         - ecgalaxy.bootstrap
 
+One-liner
+---------
+
+    bash <(curl -s https://code.europa.eu/-/snippets/1/raw/main/ansible-role.sh) ecgalaxy.bootstrap
+
+See [ansible-role](https://code.europa.eu/-/snippets/1) for instructions.
+
+Please verify the script integrity first.
+
 License
 -------
 
